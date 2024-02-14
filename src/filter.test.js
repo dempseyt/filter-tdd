@@ -17,5 +17,8 @@ describe('filter',()=>{
             expect(callbackFunction).toHaveBeenNthCalledWith(1, 1)
             expect(callbackFunction).toHaveBeenNthCalledWith(2, 2)
         })
+        it.skip('returns an array', ()=>{})
+        it.skip('returns a new array', ()=>{})
+        it.skip('returns an array of items for which the callback function is truthy', ()=>{})
     })
 })

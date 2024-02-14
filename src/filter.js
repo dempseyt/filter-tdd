@@ -1,6 +1,6 @@
 function filter(callbackFunction, arrayToFilter){
     for(let i = 0; i < arrayToFilter.length; i++) {
-        callbackFunction()
+        callbackFunction(arrayToFilter[i])
     }
 }
 export default filter
