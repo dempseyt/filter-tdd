@@ -29,6 +29,13 @@ describe('filter',()=>{
             const filteredArray = filter(callbackFunction, arrayToFilter)
             expect(arrayToFilter).not.toBe(filteredArray)
         })
-        it.skip('returns an array of items for which the callback function is truthy', ()=>{})
+        it('returns an array of items for which the callback function is truthy', ()=>{
+            const arrayToFilter = [1,2,3,4]
+            function callbackFunction(arrayElement) {
+                return (arrayElement % 2 === 0)
+            }
+            const filteredArray = filter(callbackFunction,arrayToFilter)
+            expect(filteredArray).toEqual([2,4])
+        })
     })
 })
