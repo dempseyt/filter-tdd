@@ -23,7 +23,12 @@ describe('filter',()=>{
             const filteredArray = filter(callbackFunction, arrayToFilter)
             expect(filteredArray).toBeInstanceOf(Array)
         })
-        it.skip('returns a new array', ()=>{})
+        it('returns a new array', ()=>{
+            const arrayToFilter = [1,2,3]
+            const callbackFunction = jest.fn()
+            const filteredArray = filter(callbackFunction, arrayToFilter)
+            expect(arrayToFilter).not.toBe(filteredArray)
+        })
         it.skip('returns an array of items for which the callback function is truthy', ()=>{})
     })
 })
