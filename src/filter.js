@@ -1,7 +1,10 @@
 function filter(callbackFunction, arrayToFilter){
+    let filteredArray = []
     for(let i = 0; i < arrayToFilter.length; i++) {
-        callbackFunction(arrayToFilter[i])
+        if(callbackFunction(arrayToFilter[i])) {
+            filteredArray.push(arrayToFilter[i])
+        }
     }
-    return []
+    return filteredArray
 }
 export default filter
